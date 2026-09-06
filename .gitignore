@@ -1,0 +1,53 @@
+# ================= 通用 =================
+.DS_Store
+Thumbs.db
+Desktop.ini
+*~
+*.bak
+
+# 正点原子教材 PDF（约 4.5MB 本地配套资料，不入库，见 doc/README.md 开头说明）
+doc/*.pdf
+
+# ================= Vivado 生成物 =================
+# 综合/实现/仿真运行目录与缓存（Block Design 工程 cam_sys）
+prj/cam_sys/cam_sys.cache/
+prj/cam_sys/cam_sys.gen/
+prj/cam_sys/cam_sys.hw/
+prj/cam_sys/cam_sys.ip_user_files/
+prj/cam_sys/cam_sys.runs/
+prj/cam_sys/cam_sys.sim/
+prj/cam_sys/ip_upgrade.log
+
+# 导出的硬件规格与比特流（工具生成，不入库）
+prj/cam_sys/*.xsa
+prj/cam_sys/*.bit
+
+# Vivado 运行日志与工程备份
+*.jou
+*.log
+*.backup.*
+vivado_*.backup/
+.Xil/
+
+# ================= Vitis 工作空间生成物（workspace = prj） =================
+prj/.metadata/
+prj/.analytics
+prj/IDE.log
+prj/RemoteSystemsTempFiles/
+
+# Vitis 平台工程（由 XSA 生成，不入库，见 doc/README.md 附录 A）
+prj/cam_sys_platform/
+
+# Vitis 应用工程：只保留 src 源码，其余（.project/.cproject/Debug/_ide 等）不入库
+prj/cam_screen/*
+!prj/cam_screen/src/
+
+# Vitis 系统工程（SD 启动镜像工程，可重建）
+prj/cam_screen_system/
+
+# ================= 通用构建输出（保险） =================
+Debug/
+Release/
+*.elf
+*.o
+*.a
