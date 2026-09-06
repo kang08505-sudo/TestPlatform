@@ -89,6 +89,7 @@ RGB LCD（4.3″/7″/10.1″，由 LCD ID 自动适配分辨率）
 
 ```
 Cam_to_YUV/
+├─ README.md                仓库首页/入口（GitHub 主页展示）
 ├─ doc/                     本文档与参考资料
 │  ├─ README.md             本使用说明
 │  ├─ sysframework.png      系统框架图（图 1）
